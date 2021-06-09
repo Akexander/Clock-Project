@@ -1,9 +1,9 @@
 "use strict";
 
 setInterval(setClock, 1000);
-var hourHand = document.querySelector('[data-hour-hand}');
-var minuteHand = document.querySelector('[data-minute-hand}');
-var secondHand = document.querySelector('[data-second-hand}');
+var hourHand = document.querySelector('[data-hour-hand]');
+var minuteHand = document.querySelector('[data-minute-hand]');
+var secondHand = document.querySelector('[data-second-hand]');
 
 function setClock() {
   var currentDate = new Date();
@@ -15,6 +15,8 @@ function setClock() {
   setRotation(hourHand, hoursRatio);
 }
 
-function setRotation(element, raotationRatio) {
+function setRotation(element, rotationRatio) {
   element.style.setProperty('--rotation', rotationRatio * 360);
 }
+
+setClock();
